@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:background="@color/black"
+    android:id="@+id/containerLL"
     tools:context=".SplashActivity">
 
 
@@ -12,20 +16,33 @@
         android:id="@+id/filmly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:gravity="top"
         android:fontFamily="@font/pacifico_regular"
         android:shadowColor="@color/shadow"
         android:shadowDx="6"
         android:shadowDy="11"
         android:shadowRadius="5"
-        android:lineHeight="84sp"
         android:text="@string/filmly"
         android:textAppearance="@style/filmly"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/lazy_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:lazyloader_animDur="800"
+        app:lazyloader_dotsDist="10dp"
+        app:lazyloader_dotsRadius="6dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="@color/text_color"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="@color/text_color"
+        app:lazyloader_thirdDotColor="@color/text_color" />
+
+
+
+
+
+</LinearLayout>
